@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { GithubSearchModel } from './models/github-search.model';
+import { FormlyFieldConfig } from '@ngx-formly/core/src/components/formly.field.config';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  githubSearchForm: FormGroup;
+  githubSearch: GithubSearchModel;
+  githubSearchFields: Array<FormlyFieldConfig>;
+
+  constructor() {
+    this.githubSearchForm = new FormGroup({});
+    this.githubSearch = new GithubSearchModel();
+    
+  }
 }

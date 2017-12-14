@@ -1,6 +1,6 @@
 # TddWorkshop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.1.
+This project has the goal to introduce the practice of writing code using TDD process to improve the company's solutions quality.
 
 ## Development server
 
