@@ -6,7 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyMaterialModule } from '@ngx-formly/material';
 
-import { MatToolbarModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 
@@ -20,7 +20,8 @@ import { AppComponent } from './app.component';
     ReactiveFormsModule,
     FormlyModule.forRoot(),
     FormlyMaterialModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

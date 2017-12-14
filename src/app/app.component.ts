@@ -16,6 +16,9 @@ export class AppComponent {
   constructor() {
     this.githubSearchForm = new FormGroup({});
     this.githubSearch = new GithubSearchModel();
-    
+    this.githubSearchFields = this.githubSearch.formFields();
+  }
+
+  submitGithubSearchForm(githubSearch: GithubSearchModel) {
   }
 }

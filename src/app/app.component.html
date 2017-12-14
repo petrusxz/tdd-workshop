@@ -2,3 +2,10 @@
     TDD Workshop
 </mat-toolbar>
 
+<div class="form-container">
+    <form [formGroup]="githubSearchForm" (ngSubmit)="submitGithubSearchForm(githubSearch)">
+        <formly-form [model]="githubSearch" [fields]="githubSearchFields">
+            <button [disabled]="githubSearchForm.invalid" type="submit" mat-raised-button>Search</button>
+        </formly-form>
+    </form>
+</div>
