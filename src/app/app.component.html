@@ -1,11 +1,23 @@
 <mat-toolbar color="primary">
-    TDD Workshop
+  TDD Workshop
 </mat-toolbar>
 
 <div class="form-container">
-    <form [formGroup]="githubSearchForm" (ngSubmit)="submitGithubSearchForm(githubSearch)">
-        <formly-form [model]="githubSearch" [fields]="githubSearchFields">
-            <button [disabled]="githubSearchForm.invalid" type="submit" mat-raised-button>Search</button>
-        </formly-form>
-    </form>
+  <form [formGroup]="githubSearchForm" (ngSubmit)="submitGithubSearchForm(githubSearch)">
+    <formly-form [model]="githubSearch" [fields]="githubSearchFields">
+      <button [disabled]="githubSearchForm.invalid" type="submit" mat-raised-button>Search</button>
+    </formly-form>
+  </form>
+</div>
+
+<hr *ngIf="githubRepository.length" class="divider" />
+<div class="repo-list">
+  <mat-card class="cards" *ngFor="let repo of githubRepository">
+    <mat-card-title>
+      <a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a>
+    </mat-card-title>
+    <mat-card-subtitle>Last Update: {{ repo.updated_at | date: 'dd/MM/yyyy' }}</mat-card-subtitle>
+    <mat-card-content>{{ repo.description }}</mat-card-content>
+    <mat-card-footer class="footer">{{ repo.language }}</mat-card-footer>
+  </mat-card>
 </div>

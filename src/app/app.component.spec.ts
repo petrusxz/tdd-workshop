@@ -2,8 +2,9 @@ import { FormlyModule } from '@ngx-formly/core';
 import { FormlyMaterialModule } from '@ngx-formly/material';
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { MatToolbarModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatCardModule } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -16,6 +17,9 @@ describe('AppComponent', () => {
         ReactiveFormsModule,
         FormlyModule.forRoot(),
         FormlyMaterialModule,
+        MatCardModule,
+        MatButtonModule,
+        HttpClientTestingModule
       ]
     }).compileComponents();
   }));

@@ -1,27 +1,25 @@
 import { FormlyFieldConfig } from '@ngx-formly/core/src/components/formly.field.config';
 
 export class GithubSearchModel {
-    githubRepository: string;
-    searchHistory: Array<string>;
-    accessedRepositories: Array<string>;
+    githubUser: string;
 
     formFields() {
         return <FormlyFieldConfig[]>[
             {
-                key: 'githubRepository',
+                key: 'githubUser',
                 type: 'input',
                 templateOptions: {
                     type: 'text',
-                    label: 'Github Repository',
-                    placeholder: 'Github Repository',
+                    label: 'Github Username',
+                    placeholder: 'Github Username',
                     required: true
                 },
                 validation: {
                     messages: {
-                        required: 'You need to provide a repository name'
+                        required: 'You need to provide a username'
                     }
                 }
             }
-        ]
+        ];
     }
 }

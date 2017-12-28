@@ -5,3 +5,28 @@
 button {
     margin-top: 10px;
 }
+
+hr.divider {
+  margin-bottom: 10px;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(191, 191, 191, 0), rgba(191, 191, 191, 0.75), rgba(191, 191, 191, 0));
+}
+
+div.repo-list {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.cards {
+  margin-bottom: 10px;
+  min-width: 280px;
+}
+
+.footer {
+  float: right;
+  color: #673ab7;
+  margin-right: 10px;
+  font-weight: 600;
+}
